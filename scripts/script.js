@@ -31,7 +31,7 @@ async function video_function() {
 		return;
 	}
 	// searching for movie 
-	const search_url = `https://consumet-api-self-hosted.vercel.app/movies/dramacool/${movie_name}?page=1`;
+	const search_url = `https://msks.vercel.app/movies/dramacool/${movie_name}?page=1`;
 
 	try {
 		const {data} = await axios.get(search_url);
@@ -40,7 +40,7 @@ async function video_function() {
 		let y = '';
 		for (let i = 0; i < results.length; i++) {
 			const id = results[i].id;
-			const info_url = `https://consumet-api-self-hosted.vercel.app/movies/dramacool/info?id=${id}`; // getting movie info
+			const info_url = `https://msks.vercel.app/movies/dramacool/info?id=${id}`; // getting movie info
 			const { title, image, description} = (await axios.get(info_url)).data;
 
 			y += `<p class="movie-heading"> <b>${title}</b> </p>`;
