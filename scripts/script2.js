@@ -19,7 +19,7 @@ test();
 
 let z = '';
 async function test() {
-	const infoUrl = `https://kd1-puce.vercel.ap/movies/dramacool/info?id=${seriesID}`;
+	const infoUrl = `https://kd1-puce.vercel.app/movies/dramacool/info?id=${seriesID}`;
 	const { data: infoData } = await axios.get(infoUrl);
 
 	if (infoData.episodes && infoData.episodes.length > 0) { // getting number of episodes and their respective links
